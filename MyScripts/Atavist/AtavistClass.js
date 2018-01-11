@@ -231,3 +231,31 @@ ClassSubList["slayer aspect"]= {
 	},
 	
 };
+
+SpellsList["courageous rebuttal"] = {
+	name : "Courageous Rebutal",
+	classes : ["atavist"],
+	source : ["HB",0],
+	ritual : false,
+	level : 1,
+	school : "Abjur",
+	time : "1 Reaction",
+	range : "10 feet",
+	components : "V,S,M",
+	duration  : "Instantaneous",
+	description : "As reaction make a melee weapon attack against creature that attacked you after they hit or miss. On hit gain half the damage dealt in temp HP until end of your next turn"
+};
+
+SpellsList["echo sunder"] = {
+	name : "Echo Sunder",
+	classes : ["atavist"],
+	source : ["HB",0],
+	ritual : false,
+	level : 1,
+	school : "Necro",
+	time : "1 Action",
+	range : "10 feet",
+	components : "V,S,M",
+	duration  : "Instantaneous",
+	description : "Make a melee attack with weapon. Add 1d6 to attack roll. On hit next instance of weapon damage is maximized"
+};
