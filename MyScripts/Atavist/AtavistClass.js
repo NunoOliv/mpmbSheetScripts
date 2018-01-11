@@ -37,7 +37,6 @@ ClassList["atavist"] = {
 	spellcastingList : {
 		class : "any",
 		level : [0, 7], 
-		ritual : false, 
 		spells : ["courageous rebuttal", "cause fear", "detect magic", "detect poison and disease", "echo sunder", "expeditious retreat", "false life", "heroism", "inflict wounds", "jump", "lesser bloodsight", "longstrider", "ray of sickness", "withering necrosis", "alter self", "blindness/deafness", "cruorbat call", "darkvision", "enlarge/reduce", "hold person", "lesser restoration", "locate animals or plants", "needle and thread", "polyphemus's might", "protection from poison", "spider climb", "warding bond", "coalesce humours", "protection from energy", "redwood expansion", "water breathing", "water walk", "aura of decay", "blight", "death ward", "freedom of movement", "locate creature", "stoneskin", "quicken atavism", "contagion", "enervation", "exoscleroma", "exsanguinate", "greater restoration", "reincarnate", "steel wind strike", "bones of the earth", "flesh to stone", "haemorrhaging rupture", "harm", "wind walk", "eternal blood", "greater withering", "marrowmelt", "regenerate"], 
 		//spells : ["light", "mending"],
 	},
@@ -87,7 +86,7 @@ ClassList["atavist"] = {
 			name : "Avenging Attack",
 			source : ["HB",0],
 			minlevel : 5,
-            description : "\n   " + "When an attack hits you, you fail a saving throw, or you fail an ability check which requires an action, you can make a weapon attack against any creat within range as a reaction.",
+            description : "\n   " + "When an attack hits you, you fail a saving throw, or you fail an ability check which requires an action, you can make a weapon attack against any crea within range as a reaction.",
             action : ["reaction", ""]
         },
 
@@ -95,7 +94,7 @@ ClassList["atavist"] = {
 			name : "Humansbane",
 			source : ["HB",0],
 			minlevel : 6,
-            description : "\n   " + "If i land an attack on a hummanoid and rend to its damage, the creat is destroid if his CR is below a certain threshold.",
+            description : "\n   " + "If i land an attack on a hummanoid and rend to its damage, the crea is destroid if his CR is below a certain threshold.",
             additional : ["Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1/2","Threshold: 1","Threshold: 1","Threshold: 1","Threshold: 1","Threshold: 2","Threshold:2","Threshold: 2","Threshold: 2","Threshold: 3","Threshold: 3","Threshold: 3"]
         },
 
@@ -112,7 +111,7 @@ ClassList["atavist"] = {
 
             "greedy render" : { 
                 name : "Greedy Render",
-                description : "\n   " + "Whenever damage is rolled against you (except from rending) by a hostile creat, your next immediate rend doesn't cost you hitpoints if used within 1 minute." 
+                description : "\n   " + "Whenever damage is rolled against you (except from rending) by a hostile crea, your next immediate rend doesn't cost you hitpoints if used within 1 minute." 
             },
 
             "bastion countenance" : { 
@@ -199,7 +198,7 @@ ClassSubList["slayer aspect"]= {
 			name : "Lethal Strike",
 			source : ["HB",0],
 			minlevel : 3,
-			description : "\n   " + "Once per turn, you can deal an extra 1d6 damage to one creat you hit with an attack if you have advantage on the attack roll. The attack cannot be made with a reach or heavy weapon. You don't need advantage on the attack roll if there is no other hostile creat within 5 feet of the target, or if one of your allies is within 5 feet of it.",
+			description : "\n   " + "Once per turn, you can deal an extra 1d6 damage to one crea you hit with an attack if you have advantage on the attack roll. The attack cannot be made with a reach or heavy weapon. You don't need advantage on the attack roll if there is no other hostile crea within 5 feet of the target, or if one of your allies is within 5 feet of it.",
 			additional : ["", "", "1d6", "1d6", "1d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6"],
 		},
 		
@@ -225,7 +224,7 @@ ClassSubList["slayer aspect"]= {
 			name : "Coup de Grâce",
 			source : ["HB",0],
 			minlevel : 18,
-			description : "\n   " + "as an action, you can attempt to kill a creat with an attack. If you hit them and that creat has 150 hitpoints left after you damage them or fewer, they die.",
+			description : "\n   " + "as an action, you can attempt to kill a crea with an attack. If you hit them and that crea has 150 hitpoints left after you damage them or fewer, they die.",
 			recovery : "long rest",
 			usages : 1,
 			action : ["action", ""]
@@ -245,7 +244,7 @@ SpellsList["courageous rebuttal"] = {
 	range : "10 ft",
 	components : "V,S,M",
 	duration  : "Instantaneous",
-	description : "As reaction make a melee weapon attack against creat that attacked you after they hit or miss. On hit gain half the damage dealt in temp HP until end of your next turn"
+	description : "Melee weapon att crea that attacked you after they hit or miss. On hit tempHP = dmg/2"
 };
 
 SpellsList["echo sunder"] = {
@@ -255,11 +254,11 @@ SpellsList["echo sunder"] = {
 	ritual : false,
 	level : 1,
 	school : "Necro",
-	time : "1 Action",
+	time : "1 a",
 	range : "10 ft",
 	components : "V,S,M",
 	duration  : "Instantaneous",
-	description : "Make a melee attack with weapon. Add 1d6 to attack roll. On hit next instance of weapon damage is maximized"
+	description : "Melee attack with weapon. Add 1d6 to attack roll. On hit next instance of weapon damage is maximized"
 };
 
 SpellsList["lesser bloodsight"] = {
@@ -273,7 +272,7 @@ SpellsList["lesser bloodsight"] = {
 	range : "30 ft",
 	components : "V,S",
 	duration  : "Conc, 1 min",
-	description : "You can see nearby creats. You can notice when a creat’s current hit points are below their max HP even behind materials of 3 inches thick, and half of max HP even through walls."
+	description : "See all nearby creats. If HP below max HP, see behind 3 inch Mats. Below half max HP see through walls."
 };
 
 SpellsList["withering necrosis"] = {
@@ -283,11 +282,11 @@ SpellsList["withering necrosis"] = {
 	ritual : false,
 	level : 1,
 	school : "Necro",
-	time : "1 Action",
+	time : "1 a",
 	range : "Touch",
 	components : "V,S",
 	duration  : "1 round",
-	description : "Make a melee spell attack. On hit, target takes 5d6 + 1d6/SL necrotic dmg at the end of target's next turn"
+	description : "Melee spell attack. On hit, target takes 5d6 + 1d6/SL necrotic dmg at the end of target's next turn"
 };
 
 SpellsList["cruorbat call"] = {
@@ -301,7 +300,7 @@ SpellsList["cruorbat call"] = {
 	range : "10 ft",
 	components : "V,S,M",
 	duration  : "Instantaneous",
-	description : "Choose a corpse of a Large or smaller bat. Creates cruobat. Command cruobat with bonus action. After 24H losses command of Cruobat. (see DA supplement for Cruobat statistics)"
+	description : "Creates cruobat. Command bonus action. After 24H losses command. (DA supplement for Cruobat statistics)"
 };
 
 SpellsList["needle and thread"] = {
@@ -311,12 +310,12 @@ SpellsList["needle and thread"] = {
 	ritual : false,
 	level : 2,
 	school : "Evoc",
-	time : "1 Action",
+	time : "1 a",
 	range : "150 ft",
 	components : "V,S,M",
 	save : "Con",
 	duration  : "Instantaneous",
-	description : "Target makes save. On fail, 3d8 + 1d8/SL piercing dmg and 3 + 1/SL targets within 30ft make save or take 1d8 P dmg. On fail, 1/2 dmg to first target and no bounce."
+	description : "1 crea takes 3d8+1d8/SL P and 3+1/SL crea in 30ft save or take 1d8 P. On fail, 1/2 dmg and no bounce."
 };
 
 SpellsList["polyphemus's might"] = {
@@ -330,7 +329,7 @@ SpellsList["polyphemus's might"] = {
 	range : "30 ft",
 	components : "V,S,M",
 	duration  : "Conc, 1 min",
-	description : "1+1/SL creats have 1d6 dmg roll increase on melee weapon damage rolls"
+	description : "1+1/SL creats have 1d6 dmg roll increase on melee weapon damage rolls."
 };
 
 SpellsList["coalesce humours"] = {
@@ -344,7 +343,7 @@ SpellsList["coalesce humours"] = {
 	range : "90 ft",
 	components : "V,S",
 	duration  : "Conc, 4 h",
-	description : "Choose corpse or large pool of blood to transform into blood ooze (see DA supplement for statistics) under your control(no action req). If conc is broken loose control of ooze and becomes hostile and cant be dismissed. Disapears after duration."
+	description : "Corpse or large pool of blood turn to blood ooze under your control(no action req). (See supp)"
 };
 
 SpellsList["redwood expansion"] = {
@@ -359,7 +358,7 @@ SpellsList["redwood expansion"] = {
 	components : "V,S,M",
 	duration  : "Conc, 1 min",
 	save : "Con",
-	description : "1 creat makes save. On fail or willing, size+2, adv on STR checks and saves, and weapons deal 2d4 extra dmg. "
+	description : "1 willing crea or save, size+2, adv on STR checks and saves, and weapons deal 2d4 extra dmg. "
 };
 
 SpellsList["aura of decay"] = {
@@ -370,11 +369,11 @@ SpellsList["aura of decay"] = {
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
-	range : "S (30ft rad)",
+	range : "30ft rad",
 	components : "V,S",
 	duration  : "Conc, 10 min",
 	save : "Con",
-	description : "Aura moves with you. Hostile creats that enter or start turn in area, dis. death ST and must make save or take 5d6 necrotic dmg "
+	description : "Hostile creats that enter or start turn in area, dis death ST and save or take 5d6 necrotic dmg "
 };
 
 SpellsList["quicken atavism"] = {
@@ -388,7 +387,7 @@ SpellsList["quicken atavism"] = {
 	range : "Touch",
 	components : "S",
 	duration  : "Forever",
-	description : " Choose humanoid with less that 5+1/SL to imbue with atavist spark(fail or miss at dm decision). Target's con increases to 13 if lower. Castin time reduced by 4/SL."
+	description : "Humanoid aging less that 5+1/SL. Target's con increases to 13 if lower. Casting time reduced by 4/SL."
 };
 
 SpellsList["exoscleroma"] = {
@@ -403,7 +402,7 @@ SpellsList["exoscleroma"] = {
 	components : "S",
 	duration  : "Instantaneous",
 	save : "Con",
-	description : "Creat. makes save. creats with imunity to poison or poisened are not effected. On a fail, after each longrest takes new effect. (see supplement for effects and curing conditions)"
+	description : "crea. makes save. On a fail, after each longrest takes new effect. (see supplement)"
 };
 
 SpellsList["exsanguinate"] = {
@@ -418,7 +417,7 @@ SpellsList["exsanguinate"] = {
 	components : "S",
 	duration  : "1 round",
 	save : "Con",
-	description : "Choose creat with blood, no construct, undead or elemental. Make save. On fail, 10ft radius pool of blood and takes 10d10 necrotic damage and become incapacitated until end of their next turn."
+	description : "Crea with blood save or take 10d10 necro damage and become incapacitated until end of their next turn."
 };
 
 SpellsList["haemorrhaging rupture"] = {
@@ -433,7 +432,7 @@ SpellsList["haemorrhaging rupture"] = {
 	components : "S",
 	duration  : "1 min",
 	save : "Con",
-	description : "creat makes save. On fail for every 5 ft of movement target takes 2d12 HP, half as much on sucsess. They take this damage even if they were moved against their will."
+	description : "Crea save or 2d12/5 ft of movement, half as much on sucsess even if they were moved against their will."
 };
 
 SpellsList["eternal blood"] = {
@@ -447,7 +446,7 @@ SpellsList["eternal blood"] = {
 	range : "Touch",
 	components : "S",
 	duration  : "8 h",
-	description : "Touch creat. If creat dies under the effect is revived with a new body in the last place he took a long rest one day later."
+	description : "If crea dies revived with a new body in the last place he took a long rest one day later."
 };
 
 SpellsList["greater withering"] = {
@@ -462,7 +461,7 @@ SpellsList["greater withering"] = {
 	components : "S",
 	duration  : "Instantaneous",
 	save : "Con",
-	description : "Creat makes sav. On a fail target loses 2 Str and 2 Con every LR. If either falls below 1 they die. Can be removed by lvl7 remove curse or equivalent or supperior healing spell"
+	description : "Crea makes save or loses 2 Str and 2 Con every LR. If either falls below 1 they die. (see Supp)"
 };
 
 SpellsList["marrowmelt"] = {
@@ -477,5 +476,5 @@ SpellsList["marrowmelt"] = {
 	components : "S",
 	duration  : "Instantaneous",
 	save : "Con",
-	description : "Creat makes save. On a fail target is permanently paralyzed. If fails by 5 or more he dies. Paralysis can only be reverted with 7th lvl or higher healing spell."
+	description : "Crea makes save. On a fail target is permanently paralyzed. If fails by 5 or more he dies. (see Supp)"
 };
