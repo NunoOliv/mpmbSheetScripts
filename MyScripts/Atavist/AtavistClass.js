@@ -1,4 +1,3 @@
-
 var iFileName = "AtavistClass.js"; 
 RequiredSheetVersion(12.999);
 
@@ -38,9 +37,8 @@ ClassList["atavist"] = {
 		class : "any",
 		level : [0, 7], 
 		spells : ["courageous rebuttal", "cause fear", "detect magic", "detect poison and disease", "echo sunder", "expeditious retreat", "false life", "heroism", "inflict wounds", "jump", "lesser bloodsight", "longstrider", "ray of sickness", "withering necrosis", "alter self", "blindness/deafness", "cruorbat call", "darkvision", "enlarge/reduce", "hold person", "lesser restoration", "locate animals or plants", "needle and thread", "polyphemus's might", "protection from poison", "spider climb", "warding bond", "coalesce humours", "protection from energy", "redwood expansion", "water breathing", "water walk", "aura of decay", "blight", "death ward", "freedom of movement", "locate creature", "stoneskin", "quicken atavism", "contagion", "enervation", "exoscleroma", "exsanguinate", "greater restoration", "reincarnate", "steel wind strike", "bones of the earth", "flesh to stone", "haemorrhaging rupture", "harm", "wind walk", "eternal blood", "greater withering", "marrowmelt", "regenerate"], 
-		//spells : ["light", "mending"],
 	},
-	
+
 	features : {
         "rend ichor" : {
             name :"Rend Ichor",
@@ -225,6 +223,79 @@ ClassSubList["slayer aspect"]= {
 			source : ["HB",0],
 			minlevel : 18,
 			description : "\n   " + "as an action, you can attempt to kill a crea with an attack. If you hit them and that crea has 150 hitpoints left after you damage them or fewer, they die.",
+			recovery : "long rest",
+			usages : 1,
+			action : ["action", ""]
+		}
+	}
+	
+};
+
+ClassSubList["bloodied aspect"]= {
+	regExpSearch : /bloodied/i,
+	subname : "Bloodied Aspect",
+	source : ["HB", 0], 
+	fullname : "Bloodied Atavist",
+	features : {
+		"subclassfeature3" : { 
+			name : "Wounded Nature (1)", 
+			source : ["HB",0],
+			minlevel : 3,
+			description : "\n   " + "Choose a feature using the \"Choose Feature\" button above",
+			choices : ["Alacrity", "Waste Not", "Beating Reflexes"],
+			"alacrity" : {
+				name : "Alacrity",
+				description : "At less than max HP, I can take Disengage action as a Bonus action",
+				action : ["action", "Disengage"]
+			},
+			"waste not" : {
+				name : "Waste Not",
+				description : "At less than max HP, When a creature within 30 ft of me dies my next rend doesn't cost me HP if used within 1 min"
+			},
+			"beating reflexes" : {
+				name  : "Beating Reflexes",
+				description : "At less than max HP, I can rend to Str and Dex ability checks"
+			},
+		},    
+
+		"subclassfeature3.1" : { 
+			name : "Wounded Nature (2)", 
+			source : ["HB",0],
+			minlevel : 3,
+			description : "\n   " + "Choose another Feature using the \"Choose Feature\" button above",
+			choices : ["Thickening Humors", "Serrated Strike", "Flowing Veins"],
+			"thickening humors" :  {
+				name : "Thickening Humors",
+				description : "When HP is less than Half Max HP, I can add Con mod to damage dealt with atavist spells.",
+			},
+			"serrated strike" : {
+				name : "Serrated Strike",
+				description :"When HP is less than Half Max HP, if I roll max on weapon dmg die, rend die or this feature, I can add a d8 to the result."
+			},
+			"flowing veins" : {
+				name : "Flowing Veins",
+				description : "When HP is less than Half Max HP, when i rend to weapon damage roll, I can double the result."
+			},
+		},    
+
+		"subclassfeature6" : { 
+			name : "Maiming Aura",
+			source : ["HB",0],
+			minlevel : 6,
+			description : "\n   " + "When below half max HP, me and allied creatures within 10ft (30ft at lvl 18) can add my CON mod to weapon damage rolls. "
+		},
+		
+		"subclassfeature10" : {
+			name : "Halfbound",
+			source : ["HB",0],
+			minlevel : 10,
+			description : "\n   " + "When below half max HP I have advantage on 1 weapon attack roll per turn"
+		},
+		"subclassfeature18" : {
+			name : "Rage Against the Dying",
+			source : ["HB",0],
+			minlevel : 18,
+			description : "\n   " + "When below half max HP, I'm under the effect of a haste spell.",
 			recovery : "long rest",
 			usages : 1,
 			action : ["action", ""]
