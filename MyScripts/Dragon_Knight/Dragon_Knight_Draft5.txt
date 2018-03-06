@@ -1,0 +1,38 @@
+var iFileName = "Dragon_Knight_draft5";
+RequiredSheetVersion(12.999);
+
+ClassList["dragon knight"] = {
+    regExpSearch : /^(?=.*dragon)(?=.*Knight).*$/i,
+    
+    name : "Dragon Knight",
+
+    source : ["HB", 0],
+
+    primaryAbility : "\n \u2022 Dragon Knight: Strenght or Dexterity;",
+
+    // MARK: - Add prereq
+    prereqs : "\n \u2022 Dragon Knight: Str 13 or Dex 13 and Cha 13 ",
+
+    die: 10,
+
+    improvements : [0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7],
+
+    saves : ["con", "cha"],
+
+    skills : ["\n\n" + toUni("MyClass") + ": Choose two from Arcana, Animal Handling, Athletics, Intimidation, Perception, and Persuasion.", ""], 
+
+    toolProfs : { // optional; this is an object with arrays with the tool proficiencies gained. Each entry in an array can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
+		primary : [["Herbalist Kit", 3]], 
+    },
+    
+    armor : [ //required; the 4 entries are for: ["light", "medium", "heavy", "shields"]
+		[true, true, true, true], //required; the armor proficiencies if this is the first or only class
+		[true, true, false, true] //required; the armor proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+    ],
+    
+    weapons : [ //required; the 3 entries are for: ["simple", "martial", "other"]
+		[true, true, []], //required; the weapon proficiencies if this is the first or only class
+		[true, true, []] //required; the weapon proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+	],
+
+}
